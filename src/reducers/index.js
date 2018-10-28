@@ -1,8 +1,10 @@
-import { combineReducers } from 'redux';
-import PostsReaducer from './reducer_posts';
+import { combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form"; // set alias
+import PostsReducer from "./reducer_posts";
 
 const rootReducer = combineReducers({
-  posts: PostsReaducer
+  posts: PostsReducer,
+  form: formReducer
 });
 
 export default rootReducer;
